@@ -1,0 +1,20 @@
+<h1>listing users</h1>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+<% @users.each do |f| %>
+	<tr>
+		<td><%=f.name%></td>
+		<td><%=f.email%></td>
+		<td><%=link_to 'show', f%></td>
+		<td><%=link_to 'edit',edit_user_path(f)%></td>
+		<td><%=link_to 'destroy',f,method: :delete%></td>	
+
+	</tr>
+<%end%>
+</table>	
