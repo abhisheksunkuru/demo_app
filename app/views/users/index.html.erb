@@ -11,6 +11,7 @@
 	<tr>
 		<td><%=f.name%></td>
 		<td><%=f.email%></td>
+		<td><%=link_to 'post', new_micropost_path(:user_id => f) %></td>
 		<td><%=link_to 'show', f%></td>
 		<td><%=link_to 'edit',edit_user_path(f)%></td>
 		<td><%=link_to 'destroy',f,method: :delete%></td>	

@@ -1,0 +1,21 @@
+<h1>listing microposts</h1>
+<table>
+	<tr>
+		<th>Content</th>
+		<th>User_id</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+<% @posts.each do |f| %>
+	<tr>
+		<td><%=f.content%></td>
+		<td><%=f.user_id%></td>
+		<td><%=link_to 'show', micropost_path(f) %></td>
+		<td><%=link_to 'edit',edit_micropost_path(f,:user_id=> f.user)%></td>
+		<td><%=link_to 'destroy',f,method: :delete%></td>	
+
+	</tr>
+<%end%>
+</table>	
+<%= link_to 'back',users_path(@users) %>

@@ -1,0 +1,11 @@
+<table>
+	<tr>
+		<td>content:</td>
+		<td><%= @post.content %></td>
+	</tr>
+	<tr> 
+	    <td>user_name</td>
+	    <td><%= @post.user.name%></td>
+	</tr>
+</table>	    	
+<%= link_to 'Back',:action=>'index' %>
